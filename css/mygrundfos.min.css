@@ -1,0 +1,75 @@
+.table.tdAlignMiddle tbody>tr>td{vertical-align:middle}
+.css-base .modulebox .row .form-group{margin-left:0;margin-right:0}
+.css-base .myGrundfos-widget>h3:first-child{text-transform:uppercase}
+.css-base .myGrundfos-widget .twitter-typeahead{display:block !important;position:relative !important;width:100%}
+.css-base .myGrundfos-widget .tt-menu-mygr,.css-base .myGrundfos-widget .tt-dropdown-menu{background-color:#fff;width:100%;border:1px solid #eee;box-shadow:0 4px 6px 1px rgba(0,0,0,0.5);padding:0}
+.css-base .myGrundfos-widget .tt-menu-mygr .tt-suggestion,.css-base .myGrundfos-widget .tt-dropdown-menu .tt-suggestion{padding:0 5px 10px 5px;clear:both}
+.css-base .myGrundfos-widget .tt-menu-mygr .tt-suggestion:hover,.css-base .myGrundfos-widget .tt-menu-mygr .tt-cursor,.css-base .myGrundfos-widget .tt-dropdown-menu .tt-suggestion:hover,.css-base .myGrundfos-widget .tt-dropdown-menu .tt-cursor{background:#ededed;border:1px solid #ccc;color:#333;margin:-1px}
+.css-base .myGrundfos-widget .twitter-typeahead .tt-input,.css-base .myGrundfos-widget .tt-input-mygr{margin-bottom:0}
+.css-base .myGrundfos-widget .autocomplete-image-size{float:left;margin:5px}
+.css-base .myGrundfos-widget ol.orderstatus{margin-left:-7% !important;margin-right:-2% !important;padding:40px 0}
+.css-base .myGrundfos-widget ol.orderstatus li{list-style-type:none;display:inline-block;margin:0 -2px;width:25%;text-align:center;padding-top:26px;position:relative}
+.css-base .myGrundfos-widget ol.orderstatus li:not(:first-child):before{content:' ';border-top:1px dashed #ccc;height:1px;width:calc(100% - 23px);position:absolute;top:12px;right:calc(50% + 10px)}
+.css-base .myGrundfos-widget ol.orderstatus li:after{content:' ';border:2px solid #ccc;border-radius:13px 13px;height:24px;width:24px;position:absolute;top:0;left:-10px;margin-left:50%}
+.css-base .myGrundfos-widget ol.orderstatus li:last-child::after{content:'';background-image:url('../images/truck_orderstatus.png');background-size:30px 24px;border-radius:0;left:-16px;border:0;width:30px}
+.css-base .myGrundfos-widget ol.orderstatus li.partly:not(:first-child):before{border-top:1px dashed #00a900}
+.css-base .myGrundfos-widget ol.orderstatus li.confirmed:not(:first-child):before{border-top:1px solid #00a900}
+.css-base .myGrundfos-widget ol.orderstatus li.cancelled:not(:first-child):before{border-top:1px solid #a90000}
+.css-base .myGrundfos-widget ol.orderstatus li.partly:after{border:2px solid #00a900;color:#00a900;content:"\e013";font-family:'Glyphicons Halflings';font-size:.7em;line-height:2em;text-align:center}
+.css-base .myGrundfos-widget ol.orderstatus li.confirmed:after{border:2px solid #00a900;background-color:#00a900;color:#fff;content:"\e013";font-family:'Glyphicons Halflings';font-size:.7em;line-height:2em;text-align:center}
+.css-base .myGrundfos-widget ol.orderstatus li.confirmed:last-child::after{border:0;background-color:transparent;content:''}
+.css-base .myGrundfos-widget ol.orderstatus li.cancelled:after{border:2px solid #a90000;background-color:#a90000;color:#fff;content:"\e014";font-family:'Glyphicons Halflings';font-size:.7em;line-height:2em;text-align:center}
+.css-base .myGrundfos-widget ol.orderstatus li ol{margin:0}
+.css-base .myGrundfos-widget ol.orderstatus li ol li{display:block;left:2px;width:100%}
+.css-base .myGrundfos-widget ol.orderstatus li ol li:before{content:' ';border-top:1px dashed #ccc;height:1px;width:calc(77%);position:absolute;top:12px;right:calc(60%)}
+.css-base .myGrundfos-widget ol.orderstatus li ol li.partly:before{border-top:1px dashed #00a900}
+.css-base .myGrundfos-widget ol.orderstatus li ol li.confirmed:before{border-top:1px solid #00a900}
+.css-base .myGrundfos-widget ol.orderstatus li ol li.cancelled:before{border-top:1px solid #a90000}
+.css-base .myGrundfos-widget ol.orderstatus li ol li.downline:before{height:45px;border-left:1px solid #a90000;width:50%}
+.css-base .myGrundfos-widget .orderStatusTbl tr th:first-child,.css-base .myGrundfos-widget .orderStatusTbl tr td:first-child{padding-left:30px}
+.css-base .myGrundfos-widget .orderStatusTbl tr.expandable td:first-child:before{cursor:pointer;content:"\e080";font-family:'Glyphicons Halflings';font-size:.8em;margin-left:-30px;display:inline-block;width:30px;text-align:center}
+.css-base .myGrundfos-widget .orderStatusTbl tr.expanded td:first-child:before{content:"\e114"}
+.css-base .myGrundfos-widget .orderStatusTbl tr.child{display:table-row}
+.css-base .myGrundfos-widget .orderStatusTbl tr.child td:first-child{padding-left:60px}
+.css-base .myGrundfos-widget .tooltip-inner{background-color:#fff;border:1px solid #c9c9c9;color:#333;font-weight:normal;max-width:300px;text-align:left}
+.css-base .myGrundfos-widget .tooltip.in{opacity:.95;filter:alpha(opacity=95)}
+.css-base .myGrundfos-widget .footable.breakpoint>tbody>tr>td>span.footable-toggle{float:right;margin-left:5px}
+.css-base .myGrundfos-widget .footable{border:0}
+.css-base .myGrundfos-widget .footable>thead>tr>th{border:0;border-bottom:1px solid #ccc;padding:8px;background-color:#fff}
+.css-base .myGrundfos-widget .footable>tbody>tr>td{border-left:0;padding:8px}
+.css-base .myGrundfos-widget .footable>tfoot>tr>th,.css-base .myGrundfos-widget .footable>tfoot>tr>td{background-color:inherit;background-image:none;border-top:2px solid #ccc}
+.css-base .myGrundfos-widget .footable .pagination>ul>.disabled span,.css-base .myGrundfos-widget .footable .pagination>ul>.disabled a,.css-base .myGrundfos-widget .footable .pagination>ul>.disabled a:hover,.css-base .myGrundfos-widget .footable .pagination>ul>.disabled a:focus{background-color:#fff}
+.css-base .myGrundfos-widget .footable .pagination>ul>li:first-child>a{border-bottom-left-radius:0;border-top-left-radius:0}
+.css-base .myGrundfos-widget .footable .pagination>ul>li:last-child>a{border-bottom-right-radius:0;border-top-right-radius:0}
+.css-base .myGrundfos-widget .footable .glyphicon-question-sign{color:#8cbbdd}
+.css-base .myGrundfos-widget .input-group-btn .btn{margin-top:0;padding:7px 12px;border:1px solid #c9c9c9;border-left:0}
+.css-base .myGrundfos-widget .table-striped>thead>tr>th,.css-base .myGrundfos-widget .table-striped>tbody>tr>th{background-color:#dedede}
+.css-base .myGrundfos-widget .table-striped>tbody>tr:nth-child(odd)>td{background-color:#fff}
+.css-base .myGrundfos-widget .table-striped>tbody>tr:nth-child(even)>td{background-color:#f2f2f2}
+.css-base .myGrundfos-widget .table-hover>tbody>tr:hover>td{background-color:#f2f2f2}
+.css-base .myGrundfos-widget .table-striped.table-hover>tbody>tr:nth-child(odd):hover>td{background-color:#f2f2f2}
+.css-base .myGrundfos-widget .table-striped.table-hover>tbody>tr:nth-child(even):hover>td{background-color:#dedede}
+.css-base .myGrundfos-widget .listprice-results .table td.price-column{text-align:right}
+.css-base .myGrundfos-widget .listprice-results .table td.text-center{text-align:center}
+.css-base .myGrundfos-widget .listprice-results .table td{vertical-align:middle}
+.css-base .myGrundfos-widget .listprice-results .table tfoot>tr>td{background-color:#fff;font-weight:bold;background-image:none}
+.css-base .myGrundfos-widget label.replacement-desc{margin-bottom:15px}
+.css-base .myGrundfos-widget .replacement-result{background-color:#f5f5f5;margin-bottom:15px}
+.css-base .myGrundfos-widget .replacement-result img{mix-blend-mode:multiply}
+.css-base .myGrundfos-widget .replacement-result div.name-availability{margin-top:15px}
+.css-base .myGrundfos-widget .replacement-result div.name-availability h2{font-weight:lighter}
+.css-base .myGrundfos-widget .resultwrapper .system-message div{line-height:1.428571429}
+.css-base .myGrundfos-widget .resultwrapper .system-message a:hover{text-decoration:underline}
+.css-base .myGrundfos-widget .box{background-color:#fcfcfc;border:thin solid #d5d5d5;padding:10px}
+.css-base .myGrundfos-widget .circle{border-radius:50%;display:inline-block;width:10px;height:10px}
+.css-base .myGrundfos-widget .yellow{background-color:yellow}
+.css-base .myGrundfos-widget .green{background-color:green}
+.css-base .myGrundfos-widget .color-lightgreen{color:#4aa22c}
+.css-base .myGrundfos-widget .no-top-margin{margin-top:0 !important}
+.css-base .myGrundfos-widget .no-background{background-color:transparent !important}
+.css-base .myGrundfos-widget .spinner_wrapper{position:absolute;right:41px;top:1px}
+.css-base .myGrundfos-widget .spinner{display:none;float:left}
+.css-base .myGrundfos-widget .alert>button.close{background-color:transparent;padding:0}
+.no-border{border:0}
+.pdfexport_first_div{float:left}
+.pdfexport_second_div{overflow:hidden}
