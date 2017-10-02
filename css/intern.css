@@ -1,4 +1,12 @@
-	
+	.left-nav__link--notify  {
+    display: inline-block;
+    border: 1px solid #aaa;
+    width:20px;
+    height: 20px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 12px;
+}
 
 	.css-base .modulebox .form-group,
 	.css-base .modulebox .checkbox,
@@ -69,7 +77,9 @@
 		display: none;
 	}
 
-
+.left-nav__link--notify  {
+    
+}
 
     .css-base .row{margin-right:-10px;margin-left:-10px}
     .css-base .col-sm-1,
@@ -85,7 +95,9 @@
     .css-base .col-sm-11,
     .css-base .col-sm-12
     {padding-right:10px;padding-left:10px;}
-
+.left-nav__link--notify  {
+    
+}
 
     .css-base .modulebox .video-container { margin: 0 15px 15px 15px;}
     .css-base .main-column section.component {
@@ -225,5 +237,10 @@
 		height: 120px;
 	}
 
-
+.left-nav__link--notify  {
+    
+}
 	.css-base .modulebox .row .image {margin: 0 0 15px 0;}
+.left-nav__link--notify  {
+    
+}
