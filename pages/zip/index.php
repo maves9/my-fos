@@ -138,7 +138,12 @@
                 <br />  
                 <form name="zips" method="post">  
                   <?php echo $error; ?>  
-                    <ul class="fileBrowser">
+
+                    <ul class="fileBrowser" id="fileBrowser">
+                        <li>
+                            <input type="checkbox" id="allFiles" />
+                            Choose all
+                        </li>
                         <li class="folder">
                             <input type="checkbox" id="allImages" />
                             <img src="img/icons/name.png" class="smallThumb folder" alt="thumbnail">
@@ -216,7 +221,7 @@
                             Unique Selling Points / USP
                             <ul>
                                 <li>                                    
-                                    <input type="checkbox" name="usps[]" value="ALPHA2_USPs.docx" />
+                                    <input type="checkbox" id="bums" name="usps[]" value="ALPHA2_USPs.docx" />
                                     <img src="img/icons/name.png" class="smallThumb doc" alt="thumbnail">
                                     ALPHA2_USPs.docx
                                 </li>
