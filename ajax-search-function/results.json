@@ -1,0 +1,31 @@
+{
+	"products": [
+    {
+      "name":"ALPHA1",
+      "series":"",
+      "link":"",
+      "image":"result-img/ALPHA1_circulator_product_image_62x62px.png"
+    },
+    {
+      "name":"ALPHA2",
+      "series":"",
+      "link":"",
+			"USP":[
+				"Highly flexible can be set up for any application",
+				"Low energy consumption",
+				"Backward compatible with older Grundfos circulator housings",
+				"One Touch operation enables simple set up",
+				"Power usage LED display",
+				"Plug & Pump – no need to open terminal box",
+				"Based on proven Grundfos ALPHA technology"
+			],
+      "image":"result-img/ALPHA2_product_image_62x62px.png"
+    },
+    {
+      "name":"CMBE",
+      "series":"",
+      "link":"",
+      "image":"result-img/CMBE_Booster_62x62px.png"
+    }
+  ]
+}
