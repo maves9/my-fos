@@ -1,6 +1,6 @@
 
 $('#allFiles').change(function(){
-	if ($('#allFiles').is(':checked')) {
+	if ($('#allImages').is(':checked')) {
     	$(".img").prop('checked', true);
 	}
 	else {

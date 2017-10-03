@@ -3,40 +3,69 @@
  if(isset($_POST['createpdf']))  
  {  
       $post = $_POST;   
-      $file_folder = "files/"; // folder to load files  
-      $document_folder = "documents/";
+      $print_folder = "ALPHA2/Images/Print/"; // folder to load files  
+      $web_folder = "ALPHA2/Images/Web/";
+      $usp_folder = "ALPHA2/Unique Selling Points, USP/";
+      $banner_folder = "ALPHA2/Webbanners/";
       if(extension_loaded('zip'))  
       {   
            // Checking ZIP extension is available  
-           if(isset($post['files']) and count($post['files']) > 0)  
-           {   
-                // Checking files are selected  
+                        // Checking images are selected  
                 $zip = new ZipArchive(); // Load zip library   
                 $zip_name = time().".zip";           // Zip name  
+           if(isset($post['prints']) and count($post['prints']) > 0)  
+           {   
+
                 if($zip->open($zip_name, ZIPARCHIVE::CREATE)!==TRUE)  
                 {   
-                     // Opening zip file to load files  
+                     // Opening zip   
                      $error .= "* Sorry ZIP creation failed at this time";  
                 }  
-                foreach($post['files'] as $file)  
+                foreach($post['prints'] as $print)  
                 {   
-                     $zip->addFile($file_folder.$file); // Adding files into zip  
+                     $zip->addFile($print_folder.$print); // Adding files into zip  
                 }  
                 $zip->close();  
             }
-//break
-            if(isset($post['documents']) and count($post['documents']) > 0)  
+
+            if(isset($post['webs']) and count($post['webs']) > 0)  
             {   
-                // Checking documents are selected  
-                $zip = new ZipArchive(); // Load zip library   
-                $zip_name = time().".zip";           // Zip name  
+
                 if($zip->open($zip_name, ZIPARCHIVE::CREATE)!==TRUE)  
                 {   
-                     // Opening zip document to load documents  
+                     // Opening zip web to load webs  
                      $error .= "* Sorry ZIP creation failed at this time";  
                 }  
-                foreach($post['documents'] as $document)  {
-                     $zip->addFile($document_folder.$document); // Adding files into zip  
+                foreach($post['webs'] as $web)  {
+                     $zip->addFile($web_folder.$web); // Adding files into zip  
+                }  
+                $zip->close(); 
+            }
+
+            if(isset($post['usps']) and count($post['usps']) > 0)  
+            {   
+ 
+                if($zip->open($zip_name, ZIPARCHIVE::CREATE)!==TRUE)  
+                {   
+                     // Opening zip usp to load usps  
+                     $error .= "* Sorry ZIP creation failed at this time";  
+                }  
+                foreach($post['usps'] as $usp)  {
+                     $zip->addFile($usp_folder.$usp); // Adding files into zip  
+                }  
+                $zip->close(); 
+            }
+
+            if(isset($post['banners']) and count($post['banners']) > 0)  
+            {   
+ 
+                if($zip->open($zip_name, ZIPARCHIVE::CREATE)!==TRUE)  
+                {   
+                     // Opening zip banner to load banners  
+                     $error .= "* Sorry ZIP creation failed at this time";  
+                }  
+                foreach($post['banners'] as $banner)  {
+                     $zip->addFile($banner_folder.$banner); // Adding files into zip  
                 }  
                 $zip->close(); 
             }
@@ -66,7 +95,7 @@
  ?>  
  <html>  
       <head>  
-           <title>Webslesson Tutorial</title>  
+           <title>zip</title>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
@@ -95,48 +124,107 @@
                 <form name="zips" method="post">  
                   <?php echo $error; ?>  
                     <ul class="fileBrowser">
-                        <li>                            
-                            <input type="checkbox" class="folder" id="allFiles" />
+                        <li>
+                            <input type="checkbox" class="folder" id="allImages" />
                             <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
                             Images
                             <ul>
-                                <li>                                    
-                                    <input type="checkbox" class="img" name="files[]" value="image1.png" />
+                                <li>                            
+                                    <input type="checkbox" class="subfolder img" id="allPrints" />
                                     <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
-                                    img1.png
+                                    Print
+                                    <ul>
+                                        <li>                                    
+                                            <input type="checkbox" class="img" name="prints[]" value="ALPHA2_application_image.tiff" />
+                                            <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
+                                            ALPHA2_application_image.tiff
+                                        </li>
+                                        <li>                                    
+                                            <input type="checkbox" class="img" name="prints[]" value="ALPHA2_left_product_image.tif" />
+                                            <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
+                                            ALPHA2_left_product_image.tif
+                                        </li>
+                                        <li>                                    
+                                            <input type="checkbox" class="img" name="prints[]" value="ALPHA2_product_image_right.tiff" />
+                                            <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
+                                            ALPHA2_product_image_right.tiff
+                                        </li>
+                                        <li>                                    
+                                            <input type="checkbox" class="img" id="bum" name="prints[]" value="ALPHA2_w_shells_right_product_image.tiff" />
+                                            <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
+                                            ALPHA2_w_shells_right_product_image.tiff
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li>                                    
-                                    <input type="checkbox" class="img" name="files[]" value="image2.jpg" />
+                                <li>
+                                    <input type="checkbox" class="subfolder img" id="allWebs" />
                                     <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
-                                    img2.jpg
-                                </li>
-                                <li>                                    
-                                    <input type="checkbox" class="img" name="files[]" value="image3.jpg" />
-                                    <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
-                                    img3.jpg
-                                </li>
-                                <li>                                    
-                                    <input type="checkbox" class="img" id="bum" name="files[]" value="image4.jpg" />
-                                    <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
-                                    img4.jpg
+                                    Web
+                                    <ul>
+                                        <li>
+                                            <input type="checkbox" class="img" name="webs[]" value="ALPHA2_application_image_1200x800px.jpg" />
+                                            <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
+                                            ALPHA2_application_image_1200x800px.jpg
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="img" name="webs[]" value="ALPHA2_application_image_1200x800px.png" />
+                                            <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
+                                            ALPHA2_application_image_1200x800px.png
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="img" name="webs[]" value="ALPHA2_product_image_62x62px.jpg" />
+                                            <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
+                                            ALPHA2_product_image_62x62px.jpg
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="img" name="webs[]" value="ALPHA2_product_image_62x62px.png" />
+                                            <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
+                                            ALPHA2_product_image_62x62px.png
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="img" name="webs[]" value="ALPHA2_product_image_1200x1200px.jpg" />
+                                            <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
+                                            ALPHA2_product_image_1200x1200px.jpg
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="img" name="webs[]" value="ALPHA2_product_image_1200x1200px.png" />
+                                            <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
+                                            ALPHA2_product_image_1200x1200px.png
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
                         <li>                            
                             <input type="checkbox" />
                             <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
-                            Documents
+                            Unique Selling Points / USP
                             <ul>
                                 <li>                                    
-                                    <input type="checkbox" name="documents[]" value="mdu.pdf" />
-                                    <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
-                                    mdu.pdf
+                                    <input type="checkbox" name="usps[]" value="ALPHA2_USPs.docx" />
+                                    <img src="img/icons/name.png" class="smallThumb doc" alt="thumbnail">
+                                    ALPHA2_USPs.docx
                                 </li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
                             </ul>
                         </li>
+                        <li>                            
+                            <input type="checkbox" />
+                            <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
+                            Webbanners
+                            <ul>
+                                <li>                                    
+                                    <input type="checkbox" name="banners[]" value="ALPHA2_circulator_webbanner_300x250px_ENGLISH.jpg" />
+                                    <img src="img/icons/name.png" class="smallThumb banner" alt="thumbnail">
+                                    ALPHA2_circulator_webbanner_300x250px_ENGLISH.jpg
+                                </li>
+                                <li>                                    
+                                    <input type="checkbox" name="banners[]" value="ALPHA2_circulator_webbanner_728x90px_ENGLISH.jpg" />
+                                    <img src="img/icons/name.png" class="smallThumb banner" alt="thumbnail">
+                                    ALPHA2_circulator_webbanner_728x90px_ENGLISH.jpg
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                       
                       <br />
                       <br /> 
@@ -150,38 +238,3 @@
       </body>
       <script src="js/checkBoxes"></script>  
  </html>  
-
-
-
-
-
-                      <!--table class="table table-bordered">  
-                          <tr>  
-                               <th>*</th>  
-                               <th>File Name</th>
-                          </tr>  
-                          <tr>  
-                               <td><input type="checkbox" name="files[]" value="image1.png" /></td>  
-                               <td>imag</td>  
-                          </tr>  
-                          <tr>  
-                               <td><input type="checkbox" name="files[]" value="image2.jpg" /></td>  
-                               <td>image2.jpg</td>  
-                          </tr>  
-                          <tr>  
-                               <td><input type="checkbox" name="files[]" value="image3.jpg" /></td>  
-                               <td>image3.jpg</td>  
-                          </tr>  
-                          <tr>  
-                               <td><input type="checkbox" name="files[]" value="image4.jpg" /></td>  
-                               <td>image4.jpg</td>  
-                          </tr>  
-                          <tr>  
-                           <tr>  
-                               <td><input type="checkbox" name="documents[]" value="mdu.pdf" /></td>  
-                               <td>mdu.pdf</td>  
-                          </tr> 
-                               <td colspan="2"><input type="submit" name="createpdf" value="Download as ZIP" />&nbsp;  
-                               <input type="reset" name="reset" value="Reset" /></td>  
-                          </tr>  
-                     </table> 
