@@ -1,0 +1,26 @@
+{
+	"products": [
+    {
+      "name":"ALPHA1",
+      "series":"",
+			"description":"GRUNDFOS ALPHA1 is a complete range of circulator pumps with integrated differential-pressure control enabling adjustment of pump performance to the actual system requirement.The pumps are energy-optimised and comply with the requirements of the EuP directive EuP 2015. Installing an ALPHA1 pump will reduce power consumption considerably, lower noise from thermostatic valves and similar fittings and improve the control of the system.",
+      "link":"",
+      "image":"/ALPHA1_circulator_product_image_62x62px.png",
+			"imageL":"ALPHA1_circulator_product_image_1200x1651px.png"
+    },
+    {
+      "name":"ALPHA2",
+      "series":"",
+      "link":"",
+      "image":"ALPHA2_product_image_62x62px.png",
+			"imageL":"ALPHA2_product_image_1200x1200px.png"
+    },
+    {
+      "name":"CMBE",
+      "series":"",
+      "link":"",
+      "image":"CMBE_Booster_62x62px.png",
+			"imageL":"Grundfos CMBE_Booster_1200x1200px.png"
+    }
+  ]
+}
