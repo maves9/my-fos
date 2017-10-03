@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="css/intern.css" type="text/css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="css/niko.css" type="text/css">
+<!-----------Search-------------------->
+<article class="modulebox myGrundfos-widget search">
+	<h3 class="search__h3">What are you looking for?</h3>
+    <label class="form-group gflabel search__label">Search in all or select a category</label>
+	<form id="template-form">
+	    <section class="input-group search__section">
+			<input type="text" class="search__textinput" id="productSearch_f81b1fb6" name="searchstring" placeholder="Search">
+				<button class="search__btn" type="submit">
+					<i class="material-icons search__i">search</i>
+                </button>
+        </section>
+        
+		<select name="categories" class="search__select" required>
+			<option value="all" class="search__select__option">All categories</option>
+			<option value="replace" class="search__select__option">Replace pump</option>
+			<option value="spare-parts" class="search__select__option">Spare parts</option>
+			<option value="order" class="search__select__option">Order status</option>
+			<option value="list-pris" class="search__select__option">List price</option>
+			<option value="availability" class="search__select__option">Availability</option>
+			<option value="marketing-material" class="search__select__option">Marketing material</option>
+          </select>
+          
+          <input type="checkbox" class="search__checkbox" name="advanced" id="check"> 
+          <label class="search__checkbox__label">Advanced search options</label>
+          
+		</form>
+</article>
+
+<!-----------Advanced search------------>
+<article class="advanced" id="advanced">
+	<form action="">
+		<select name="market-areas" class="advanced__select">
+			<option value="" disabled selected hidden>Market Areas</option>
+			<option value="buildings">Buildings</option>
+			<option value="industry">Industry</option>	
+			<option value="water">Water</option>
+		</select>
+		<select name="industries" class="advanced__select">
+			<option value="" disabled selected hidden>Industries</option>
+			<option value="automotive">Automotive industry</option>
+			<option value="biofuel">Biofuel industry</option>
+			<option value="commercial">Commercial buildings</option>
+			<option value="machining">Machining</option>
+			<option value="marine">Marine</option>
+			<option value="mining">Mining industry</option>
+		</select>
+		<select name="applications" class="advanced__select">
+			<option value="" disabled selected hidden>Applications</option>
+			<option value="boiler">Boiler systems</option>
+			<option value="bottle-washing">Bottle washing</option>
+			<option value="cooling">Cooling</option>
+			<option value="disinfection">Disinfection</option>
+		</select>
+		<select name="pump-design" class="advanced__select">
+			<option value="" disabled selected hidden>Pump Design</option>
+			<option value="booster-set">Booster set</option>
+			<option value="canned-rotor">Canned rotor</option>
+			<option value="dosing-pumps">Dosing pumps</option>
+			<option value="encapsulated">Encapsulated</option>
+		</select>
+	</form>
+</article>
+<script src="./js/niko.js"></script>
