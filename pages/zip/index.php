@@ -101,6 +101,21 @@
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
       </head>  
           <style>
+          ul {
+            background-color: #eee;
+          }
+          li {
+            background-color: #ddd;
+          }
+          .folder {
+            background-color: #bbb;
+          }
+          .subfolder {
+            background-color: #ccc;
+          }
+          .filebrowser {
+            padding: 20px;
+          }
           .fileBrowser,
           .fileBrowser li {
             list-style-type: none;
@@ -124,13 +139,13 @@
                 <form name="zips" method="post">  
                   <?php echo $error; ?>  
                     <ul class="fileBrowser">
-                        <li>
-                            <input type="checkbox" class="folder" id="allImages" />
-                            <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
+                        <li class="folder">
+                            <input type="checkbox" id="allImages" />
+                            <img src="img/icons/name.png" class="smallThumb folder" alt="thumbnail">
                             Images
                             <ul>
-                                <li>                            
-                                    <input type="checkbox" class="subfolder img" id="allPrints" />
+                                <li class="subfolder">                            
+                                    <input type="checkbox" class="img" id="allPrints" />
                                     <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
                                     Print
                                     <ul>
@@ -156,8 +171,8 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <input type="checkbox" class="subfolder img" id="allWebs" />
+                                <li class="subfolder">
+                                    <input type="checkbox" class="img" id="allWebs" />
                                     <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
                                     Web
                                     <ul>
@@ -195,7 +210,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>                            
+                        <li class="folder">                            
                             <input type="checkbox" />
                             <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
                             Unique Selling Points / USP
@@ -207,7 +222,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>                            
+                        <li class="folder">                            
                             <input type="checkbox" />
                             <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
                             Webbanners
