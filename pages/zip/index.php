@@ -115,6 +115,7 @@
           }
           .filebrowser {
             padding: 20px;
+            overflow: hidden;
           }
           .fileBrowser,
           .fileBrowser li {
@@ -128,6 +129,11 @@
           }
           input[type=checkbox]not(:checked) {
             background-color: blue;
+          }
+          span {
+            cursor: pointer;
+            padding-right: 200px;
+           
           }
 
           </style>
@@ -147,12 +153,12 @@
                         <li class="folder">
                             <input type="checkbox" id="allImages" />
                             <img src="img/icons/name.png" class="smallThumb folder" alt="thumbnail">
-                            Images
+                            <span class="openClose">Images</span>
                             <ul>
                                 <li class="subfolder">                            
                                     <input type="checkbox" class="img" id="allPrints" />
                                     <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
-                                    Print
+                                    <span class="openClose">Print</span>
                                     <ul>
                                         <li>                                    
                                             <input type="checkbox" class="img" name="prints[]" value="ALPHA2_application_image.tiff" />
@@ -179,7 +185,7 @@
                                 <li class="subfolder">
                                     <input type="checkbox" class="img" id="allWebs" />
                                     <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
-                                    Web
+                                    <span class="openClose">Web</span>
                                     <ul>
                                         <li>
                                             <input type="checkbox" class="img" name="webs[]" value="ALPHA2_application_image_1200x800px.jpg" />
@@ -218,7 +224,7 @@
                         <li class="folder">                            
                             <input type="checkbox" />
                             <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
-                            Unique Selling Points / USP
+                            <span class="openClose">Unique Selling Points / USP</span>
                             <ul>
                                 <li>                                    
                                     <input type="checkbox" id="bums" name="usps[]" value="ALPHA2_USPs.docx" />
@@ -230,7 +236,7 @@
                         <li class="folder">                            
                             <input type="checkbox" />
                             <img src="img/icons/name.png" class="smallThumb" alt="thumbnail">
-                            Webbanners
+                            <span class="openClose">Webbanners</span>
                             <ul>
                                 <li>                                    
                                     <input type="checkbox" name="banners[]" value="ALPHA2_circulator_webbanner_300x250px_ENGLISH.jpg" />
@@ -249,8 +255,8 @@
                       <br />
                       <br /> 
                       <br />
-                      <input type="submit" name="createpdf" value="Download as ZIP" />&nbsp;  
-                      <input type="reset" name="reset" value="Reset" /></td>  
+                      <input type="submit" name="createpdf" value="Download" />&nbsp;  
+                      <!--input type="reset" name="reset" value="Reset" /></td-->  
                          
                     
                 </form>  

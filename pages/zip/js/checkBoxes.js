@@ -1,4 +1,3 @@
-
 $('#allFiles').change(function(){
 	if ($('#allFiles').is(':checked')) {
     	$("#fileBrowser li input").prop('checked', true);
@@ -15,4 +14,8 @@ $('.folder input').change(function(){
 	else {
 		$(this).parent('li').find('ul li input').prop('checked', false);
 	}
+});
+
+$('.openClose').click(function(){
+	$(this).parent('li').find('ul li').toggle();
 });
