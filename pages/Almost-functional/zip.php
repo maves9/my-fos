@@ -55,7 +55,7 @@
                 foreach($post['usps'] as $usp)  {
                      $zip->addFile($usp_folder.$usp); // Adding files into zip
                 }
-                
+
                 $zip->close();
             }
 
@@ -257,3 +257,4 @@
 
                 </form>
            </div>
+    <script src="zip/js/checkBoxes"></script>

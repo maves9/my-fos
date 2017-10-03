@@ -16,7 +16,7 @@
 
    <br/>
   </div>
-    <script src="zip/js/checkBoxes"></script>
+
   <script>
   $(document).ready(function(){
 
@@ -59,6 +59,8 @@
 
     var dataID = $(this).data('target'); //the key
 
+
+
     $.getJSON('results.json', function(data) {
 
       var name = data.products[dataID].name;
@@ -69,10 +71,11 @@
       $('#resultList').append('<li><button onclick="sectionDelete(this)">X</button><img src="result-img/' + imageL + '"/>'
       + name +'<p>' + description + '</p><button id="btn" onclick="zip(this)" data-target="'+name+'">show</button></li><br>') ;
 
-      });
+        });
 
-      });
 
+
+    });
   });
 
   function zip(x){
@@ -85,7 +88,7 @@
          data:{dataT : dataTarget},
          success:function(html) {
 
-           $('#resultList').append(html);
+           $('*[data-target="'+dataTarget+'"]').parent().append(html);
          }
 
     });
