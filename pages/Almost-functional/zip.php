@@ -13,7 +13,7 @@
           // Checking ZIP extension is available
           // Checking images are selected
           $zip = new ZipArchive(); // Load zip library
-          $zip_name = time().".zip";           // Zip name
+          $zip_name = $name.".zip";           // Zip name
 
            if(isset($post['prints']) and count($post['prints']) > 0)
            {
@@ -77,8 +77,10 @@
                 {
                      // push to download the zip
                      header('Content-type: application/zip');
-                     header('Content-Disposition: attachment; filename="'.$zip_name.'"');
+                     header('Content-Disposition: attachment; filename="'.$name);
+                    header("Location: "+$zip_name);
                      readfile($zip_name);
+
 
                      // remove zip file is exists in temp path
                      unlink($zip_name);
@@ -96,48 +98,10 @@
  }
  ?>
 
-          <style>
-          ul {
-            background-color: #eee;
-          }
-          li {
-            background-color: #ddd;
-          }
-          .folder {
-            background-color: #bbb;
-          }
-          .subfolder {
-            background-color: #ccc;
-          }
-          .filebrowser {
-            padding: 20px;
-            overflow: hidden;
-          }
-          .fileBrowser,
-          .fileBrowser li {
-            list-style-type: none;
-             margin-bottom: 5px;
-          }
+           <div id="zipHTML"class="container">
 
-          input[type=checkbox] {
-            width: 18px;
-
-          }
-          input[type=checkbox]not(:checked) {
-            background-color: blue;
-          }
-          span {
-            cursor: pointer;
-            padding-right: 200px;
-
-          }
-
-          </style>
-
-           <div class="container">
-                <br />
-                <br />
-                <br />
+                <br/>
+                <br/>
                 <form name="zips" method="post">
                   <?php echo $error; ?>
 
@@ -257,4 +221,4 @@
 
                 </form>
            </div>
-    <script src="zip/js/checkBoxes"></script>
+    <script src="zip/js/checkBoxes.js"></script>
