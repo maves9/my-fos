@@ -1,9 +1,0 @@
-[DEFAULT]
-BASEURL=https://product-selection.grundfos.com/catalogue.html?custid=GMA&familycode=ALPFAM
-[{000214A0-0000-0000-C000-000000000046}]
-Prop3=19,11
-[InternetShortcut]
-URL=https://product-selection.grundfos.com/catalogue.html?custid=GMA&familycode=ALPFAM#/Produktkatalog/Produktfamilie/ALPHA
-IDList=
-IconFile=https://product-selection.grundfos.com/favicon.ico
-IconIndex=1
