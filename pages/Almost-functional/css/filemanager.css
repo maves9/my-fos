@@ -109,7 +109,13 @@ form[name=zips] .folder_title span {
   z-index: 5;
   bottom: 60px;
   left: 60px;
-
+}
+.download input[type=button] {
+    border: none;
+    background: none;
+    cursor: pointer;
+    vertical-align: top;
+    line-height: 1.7;
 }
 .fileDisplay {
   width: calc(100% - 181px);
@@ -124,7 +130,7 @@ form[name=zips] .folder_title span {
   border: solid 1px #C9C9C9;
   padding: 10px 20px;
   text-align: left;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 .fileDisplay--name em {
   text-transform: uppercase;

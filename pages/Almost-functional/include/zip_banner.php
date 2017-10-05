@@ -31,7 +31,7 @@
     <i class="material-icons">file_download</i><input type="button" value="Print" /><br/>
     <i class="material-icons">file_download</i><input type="button" value="Embed" /><br/>
     <i class="material-icons">file_download</i><input type="button" value="Download" />
-    <p id="dlError"></p>                   
+    <p id="dlError"></p>
   </section>
 
 </section>
@@ -40,7 +40,7 @@
     <em>File name //</em>
     <span>ALPHA2_circulator_webbanner_300x250px_ENGLISH.jpg</span>
   </p>
-  <img id="banner_viewer"  src="./ALPHA2/Webbanners/ALPHA2_circulator_webbanner_300x250px_ENGLISH.jpg">
+  <img id="banner_viewer"  src="zip/ALPHA2/Webbanners/ALPHA2_circulator_webbanner_300x250px_ENGLISH.jpg">
   <div class="embed">
     <div class="embed--button">Embed</div>
     <input type="text"></input>

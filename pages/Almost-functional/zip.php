@@ -1,4 +1,3 @@
-
 <!--------------------- !!! ANDREAS !!! -------------------->
     <section class="files">
       <ul class="files_nav">
@@ -13,11 +12,12 @@
  $error = ""; //error holder
  if(isset($_POST['createpdf']))
  {
+      $name = $_GET['dataT'];
       $post = $_POST;
-      $print_folder = "zip/ALPHA2/Images/Print/"; // folder to load files
-      $web_folder = "zip/ALPHA2/Images/Web/";
-      $usp_folder = "zip/ALPHA2/Unique Selling Points, USP/";
-      $banner_folder = "zip/ALPHA2/Webbanners/";
+      $print_folder = "zip/". $name ."/Images/Print/"; // folder to load files
+      $web_folder = "zip/". $name ."/Images/Web/";
+      $usp_folder = "zip/". $name ."/Unique Selling Points, USP/";
+      $banner_folder = "zip/". $name ."/Webbanners/";
       if(extension_loaded('zip'))
       {
            // Checking ZIP extension is available

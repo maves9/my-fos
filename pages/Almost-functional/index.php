@@ -110,7 +110,7 @@ $(document).ready(function(){
     var expression = new RegExp(searchField, "i");// "i" for ingnore case sensitive
 
     $.getJSON('results.json', function(data) {
-      $('#result').prepend('<h2 class="text-center">Results</h2><hr>')
+      $('#result').prepend('<h2 class="text-center">Results for "'+searchField+'"</h2><hr>')
       $.each(data.products, function(key, value){  //loop json products
 
       if (value.name.search(expression) !== -1 ){ //search regular expression
@@ -156,16 +156,7 @@ $('#result').on('click', 'li', function() { //get data of result
 
       call(name); //call filemaneger
     });
-      function call(n) {
-        $.ajax({
-             type: "GET",
-             url: 'zip.php',
-             data:{dataT : n},
-             success:function(html) {
-               $('#resultList li#'+ n +'').append(html);
-             }
-           });
-      }
+
 
         if($("#resultList").children().length === 0) {
           $("#resultList").prepend('<h2 class="text-center">Your results</h2><hr>')
@@ -175,7 +166,16 @@ $('#result').on('click', 'li', function() { //get data of result
 
 });//ducument ready
 
-
+function call(n) { //callback
+  $.ajax({
+       type: "GET",
+       url: 'zip.php',
+       data:{dataT : n},
+       success:function(html) {
+         $('#resultList li#'+ n +'').append(html);
+       }
+     });
+}
 
 function sectionDelete(btn) {
     $(btn).parent().parent().remove();
