@@ -51,14 +51,16 @@ $('.zip_tab').click(function(){
 
 	var thisVal = $(this).val();
 
-	//$(".zip_content").hide();
-	$('.zip_content:nth-child( ' + (thisVal + 1) + ' )').toggle();
+	$(".zip_content").hide();
+	$('.zip_content:nth-child( ' + (thisVal + 1) + ' )').show();
 });
 
 
 // choose file display
 
 // pdf_viewer
+
+
 
 $(".pdf_view_select").click(function() {
 	var name = $(this).attr('title');
